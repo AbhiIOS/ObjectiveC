@@ -34,8 +34,11 @@ int main(int argc, const char * argv[]) {
         for (int i=0; i<[array count]; i++)
         {
             int num = [[array objectAtIndex:i] intValue];
+            //NSLog(@"%d",num);
             [olist InsertWord:num];
         }
+
+        [olist print];
         
         int num1;
         NSLog(@"Enter the number to be searched");
@@ -50,10 +53,10 @@ int main(int argc, const char * argv[]) {
             [olist InsertWord:num1];
         }
         
-        NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES);
+        /*4NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *filePath = [[paths objectAtIndex:0]stringByAppendingPathComponent:@"Number.txt"];
         NSString *temp1 = [[NSString alloc] initWithString:@"my name is gaurav"];
-        [temp1 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];
+        [temp1 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];*/
         
     }
     return 0;

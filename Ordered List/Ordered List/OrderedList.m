@@ -31,12 +31,19 @@ OrderedList *newNode;
     
     if (head == NULL)
     {
+        newNode.intdata = data;
         head = newNode;
         
     }
     else
     {
         OrderedList *temp = head;
+        if (head.intdata > data){
+            newNode.intdata = data;
+            newNode.Nextaddr = temp;
+            head = newNode;
+        }
+        else {
         while (temp.Nextaddr != NULL)
         {
             if (data < temp.intdata)
@@ -45,7 +52,7 @@ OrderedList *newNode;
                 newNode.Nextaddr = temp;
                 break;
             }
-            else if (data > temp.intdata)
+            else if (data > temp.intdata && data < temp.Nextaddr.intdata)
             {
                 newNode.intdata = data;
                 newNode.Nextaddr = temp.Nextaddr;
@@ -60,10 +67,6 @@ OrderedList *newNode;
             newNode.intdata = data;
             temp.Nextaddr = newNode;
         }
-        else
-        {
-            newNode.intdata = data;
-            newNode.Nextaddr = temp;
         }
         
     }
@@ -121,6 +124,17 @@ OrderedList *newNode;
         return YES;
     }
     return NO;
+}
+
+-(void)print
+{
+    OrderedList *temp = head;
+    while (temp != NULL)
+    {
+        int num = temp.intdata;
+        NSLog(@"%d",num);
+        temp = temp.Nextaddr;
+    }
 }
 
 

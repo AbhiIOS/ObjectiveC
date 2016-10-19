@@ -18,6 +18,7 @@
 -(void)InsertWord:(int)data;
 -(void)remove:(int)word;
 -(BOOL)search:(int)word;
+-(void)print;
 
 @property (readwrite) int intdata;
 @property (retain)OrderedList *Nextaddr;
