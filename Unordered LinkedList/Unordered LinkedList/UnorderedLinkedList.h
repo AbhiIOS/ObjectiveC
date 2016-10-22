@@ -15,9 +15,11 @@
 }
 
 -(id)init:(NSString *)word;
+-(void)print;
 -(void)InsertWord:(NSString *)data;
 -(void)remove:(NSString *)word;
 -(BOOL)search:(NSString *)word;
+-(void) writeToLogFile:(NSString*)content;
 
 @property (readwrite) NSString *stringdata;
 @property (retain)UnorderedLinkedList *Nextaddr;

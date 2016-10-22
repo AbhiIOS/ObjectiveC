@@ -33,6 +33,7 @@ UnorderedLinkedList *newNode;
     if (head == NULL)
     {
         head = newNode;
+        //[self writeToLogFile:head.stringdata];
         
     }
     else
@@ -101,4 +102,44 @@ UnorderedLinkedList *newNode;
     return NO;
 }
 
+-(void) writeToLogFile:(NSString*)content
+{
+    NSString *content2 = [NSString stringWithFormat:@"%@\n",content];
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:@"/Users/bridgelabz/Desktop/file.txt"];
+    
+    if (content == head.stringdata){
+        [content2 writeToFile:@"/Users/bridgelabz/Desktop/file.txt"
+                   atomically:YES
+                     encoding:NSStringEncodingConversionAllowLossy
+                        error:nil];
+    }
+    else if (fileHandle){
+        [fileHandle seekToEndOfFile];
+        [fileHandle writeData:[content2 dataUsingEncoding:NSUTF8StringEncoding]];
+        [fileHandle closeFile];
+    }
+    
+}
+
+-(void)print
+{
+    
+    if (head.Nextaddr == NULL)
+    {
+        [self writeToLogFile:head.stringdata];
+    }
+    else
+    {
+        UnorderedLinkedList *temp = head;
+        while (temp.Nextaddr != NULL)
+        {
+            [self writeToLogFile:temp.stringdata];
+            temp = temp.Nextaddr;
+        }
+        
+        [self writeToLogFile:temp.stringdata];
+        NSLog(@"File updated");
+    }
+    }
 @end

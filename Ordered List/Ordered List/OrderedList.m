@@ -137,5 +137,46 @@ OrderedList *newNode;
     }
 }
 
+-(void) writeToLogFile:(int)content
+{
+    NSString *content2 = [NSString stringWithFormat:@"%d\n",content];
+    
+    NSFileHandle *fileHandle = [NSFileHandle fileHandleForWritingAtPath:@"/Users/bridgelabz/Desktop/file.txt"];
+    
+    if (content == head.intdata){
+        [content2 writeToFile:@"/Users/bridgelabz/Desktop/file.txt"
+                   atomically:YES
+                     encoding:NSStringEncodingConversionAllowLossy
+                        error:nil];
+    }
+    else if (fileHandle){
+        [fileHandle seekToEndOfFile];
+        [fileHandle writeData:[content2 dataUsingEncoding:NSUTF8StringEncoding]];
+        [fileHandle closeFile];
+    }
+    
+}
+
+-(void)print1
+{
+    
+    if (head.Nextaddr == NULL)
+    {
+        [self writeToLogFile:head.intdata];
+    }
+    else
+    {
+        OrderedList *temp = head;
+        while (temp.Nextaddr != NULL)
+        {
+            [self writeToLogFile:temp.intdata];
+            temp = temp.Nextaddr;
+        }
+        
+        [self writeToLogFile:temp.intdata];
+        NSLog(@"File updated");
+    }
+}
+
 
 @end

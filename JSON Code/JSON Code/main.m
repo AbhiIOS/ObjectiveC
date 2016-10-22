@@ -12,23 +12,29 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
-        //Inventory *invt = [[Inventory alloc]init];
-        NSError *error;
+        Inventory *invt = [[Inventory alloc]init];
         
-        NSMutableDictionary *rice =[NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                    @{@"Name": @"Basmati Rice",
-                                    @"Weight" : @"150kgs",
-                                      @"price(per kg)" : @"80"}, nil];
+        NSMutableDictionary *rice =[[NSMutableDictionary alloc]init];
+        [rice setValue:@"BasmatiRice" forKey:@"Name"];
+        [rice setValue:@"150KGS" forKey:@"Weight"];
+        [rice setValue:@"80" forKey:@"PricePerKG"];
         
-        NSMutableDictionary *pulses = [NSMutableDictionary dictionaryWithObjectsAndKeys:@{ @"Name" : @"Arhar dal",
-                                            @"Weight":@"50kg",
-                                            @"price(per kg" : @"50"},nil];
+        NSMutableDictionary *pulses =[[NSMutableDictionary alloc]init];
+        [pulses setValue:@"GreenGram" forKey:@"Name"];
+        [pulses setValue:@"110KGS" forKey:@"Weight"];
+        [pulses setValue:@"30" forKey:@"PricePerKG"];
         
-        NSMutableDictionary *wheat = [NSMutableDictionary dictionaryWithObjectsAndKeys:@{@"Name":@"Bajraa",@"Weight":@"100kgs",@"Price(per kg":@"40"}, nil];
+        NSMutableDictionary *wheat =[[NSMutableDictionary alloc]init];
+        [wheat setValue:@"Semolina" forKey:@"Name"];
+        [wheat setValue:@"80KGS" forKey:@"Weight"];
+        [wheat setValue:@"45" forKey:@"PricePerKG"];
         
-        NSMutableDictionary *inventory = [NSMutableDictionary dictionaryWithObjectsAndKeys:@{@"Rice":rice,@"Pulses":pulses,@"Wheat":wheat}, nil];
+        NSMutableDictionary *inventory =[[NSMutableDictionary alloc]init];
+        [inventory setValue:rice  forKey:@"Rice"];
+        [inventory setValue:pulses forKey:@"Pulses"];
+        [inventory setValue:wheat forKey:@"Wheat"];
         
-        NSDictionary *jsondata = [NSJSONSerialization JSONObjectWithData:inventory options:NSJSONReadingMutableContainers error:&error];
+        NSMutableDictionary *jsondata = [NSJSONSerialization JSONObjectWithData:inventory options:NSJSONReadingMutableLeaves error:NULL];
         
         NSEnumerator *enumerator = [jsondata keyEnumerator];
         id key;

@@ -48,10 +48,11 @@ int main(int argc, const char * argv[]) {
         }
         else
         {
-            NSLog(@"Word not found");
+            NSLog(@"Word Not found");
+            [list InsertWord:wrd];
         }
         
-        
+        [list print];
         
     }
     return 0;

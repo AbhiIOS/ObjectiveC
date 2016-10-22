@@ -50,13 +50,11 @@ int main(int argc, const char * argv[]) {
         }
         else
         {
+            NSLog(@"Number not found");
             [olist InsertWord:num1];
         }
         
-        /*4NSArray *paths = NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *filePath = [[paths objectAtIndex:0]stringByAppendingPathComponent:@"Number.txt"];
-        NSString *temp1 = [[NSString alloc] initWithString:@"my name is gaurav"];
-        [temp1 writeToFile:filePath atomically:YES encoding:NSUTF8StringEncoding error:nil];*/
+        [olist print1];
         
     }
     return 0;

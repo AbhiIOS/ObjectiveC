@@ -14,21 +14,15 @@ int main(int argc, const char * argv[]) {
         
         RegularExpression *regex = [[RegularExpression alloc]init];
         char name[40];
-        NSLog(@"Enter name");
+        NSLog(@"Enter first name");
         scanf("%s",name);
         NSString *line = [NSString stringWithUTF8String:name];
         
-    NSString *str = @"hello <<name>>";
-    NSString *str2 = [str stringByReplacingOccurrencesOfString:@"<<name>>" withString:line];
+    NSString *str = @"Hello <<name>>, We have your full name as <<full name>> in our system. your contact number is 91-xxxxxxxxxx. Please,let us know in case of any clarification Thank you BridgeLabz 01/01/2016.";
         
-    NSLog(@"its %@", str2);
+        [regex replaceWord:str withName:line];
         
-        /*char line1[40];
-        NSLog(@"Enter the string");
-        scanf("%s",line1);
-        NSString *str = [NSString stringWithUTF8String:line1];
         
-        [regex replaceWord:str withName:line];*/
-    }
+       }
     return 0;
 }

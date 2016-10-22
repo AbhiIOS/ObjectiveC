@@ -15,10 +15,12 @@
 }
 
 -(id)initOL;
+-(void)print1;
 -(void)InsertWord:(int)data;
 -(void)remove:(int)word;
 -(BOOL)search:(int)word;
 -(void)print;
+-(void) writeToLogFile:(int)content;
 
 @property (readwrite) int intdata;
 @property (retain)OrderedList *Nextaddr;
