@@ -1,13 +1,12 @@
 //
 //  main.m
-//  JSON Code
+//  Inventory Mananagment
 //
-//  Created by BridgeLabz Solutions LLP  on 10/21/16.
+//  Created by BridgeLabz Solutions LLP  on 10/24/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "Inventory.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -18,8 +17,8 @@ int main(int argc, const char * argv[]) {
         NSData *jsonData = [str dataUsingEncoding:NSUTF8StringEncoding];
         
         NSDictionary *json = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingMutableContainers error:&error];
-        NSLog(@"%@", error);
-        NSLog(@"%@", json[@"data"]);
-                    }
+        NSDictionary *fetchdata = [json objectForKey:@"data"];
+        NSLog(@"%@",fetchdata);
+    }
     return 0;
 }

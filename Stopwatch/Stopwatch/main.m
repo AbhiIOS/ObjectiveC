@@ -13,12 +13,12 @@ int main(int argc, const char * argv[]) {
         int num;
         NSLog(@"Press 1 to start");
         scanf("%d",&num);
-        double endTime;
-        double startTime;
+    
+        NSDate *date;
         if (num == 1)
         {
-            startTime = [[NSDate date] timeIntervalSinceReferenceDate];
-            NSLog(@"%f",startTime);
+            date = [NSDate date];
+            NSLog(@"Timer started");
         }
         
         int num1;
@@ -26,15 +26,9 @@ int main(int argc, const char * argv[]) {
         scanf("%d",&num1);
         if (num1 == 2)
         {
-            endTime = [[NSDate date] timeIntervalSinceReferenceDate];
-            NSLog(@"%f",endTime);
+            NSTimeInterval endTime = [date timeIntervalSinceNow];
+            NSLog(@"Total Time Elapsed : %f seconds",endTime*-1);
         }
-        
-        
-        double elapsedTime = endTime - startTime;
-        
-        NSLog(@"time: %f", elapsedTime);
-        
     }
     return 0;
 }
