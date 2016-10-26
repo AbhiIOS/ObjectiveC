@@ -36,44 +36,124 @@
 -(BOOL)addElements:(char [3][3])arr1 withNum:(char)num1 playerName:(NSString *)name
 {
     int num;
-    NSLog(@"Enter your choice");
+   // NSLog(@"Enter your choice");
     scanf("%d",&num);
     switch (num)
     {
         case 1:
-            arr1[0][0] = num1;
+            if (arr1[0][0] == '1' || arr1[0][0] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            } else {
+                arr1[0][0] = num1;
+            }
+            
             break;
             
         case 2:
+            if (arr1[0][1] == '1' || arr1[0][1] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            }
+            else{
+
             arr1[0][1] = num1;
+            }
             break;
             
         case 3:
-            arr1[0][2] = num1;
+            if (arr1[0][2] == '1' || arr1[0][2] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            }
+            else
+            {
+              arr1[0][2] = num1;
+            }
             break;
             
         case 4:
-            arr1[1][0] = num1;
+            if (arr1[1][0] == '1' || arr1[1][0] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            }
+            else
+            {
+                arr1[1][0] = num1;
+            }
             break;
             
         case 5:
-            arr1[1][1] = num1;
+            if (arr1[1][1] == '1' || arr1[1][1] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            }
+            else
+            {
+                arr1[1][1] = num1;
+            }
             break;
             
         case 6:
-            arr1[1][2] = num1;
+            if (arr1[1][2] == '1' || arr1[1][2] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            }
+            else
+            {
+                arr1[1][2] = num1;
+            }
             break;
             
         case 7:
-            arr1[2][0] = num1;
+            if (arr1[2][0] == '1' || arr1[2][0] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            }
+            else
+            {
+                arr1[2][0] = num1;
+            }
             break;
             
         case 8:
-            arr1[2][1] = num1;
+            if (arr1[2][1] == '1' || arr1[2][1] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            }
+            else
+            {
+                arr1[2][1] = num1;
+            }
             break;
             
         case 9:
-            arr1[2][2] = num1;
+            if (arr1[2][2] == '1' || arr1[2][2] == '0')
+            {
+                NSLog(@"%@ put your mark in another position",name);
+                [self addElements:arr1 withNum:num1 playerName:name];
+                break;
+            }
+            else
+            {
+                arr1[2][2] = num1;
+            }
             break;
             
         default:
@@ -125,7 +205,7 @@
             gameArray[i][j] = arr1[i][j];
         }
     }
-    //[self print:arr1];
+    
     return NO;
 }
 -(int)get:(int)i :(int)j{

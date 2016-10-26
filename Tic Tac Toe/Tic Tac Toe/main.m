@@ -29,6 +29,8 @@ int main(int argc, const char * argv[]) {
         
         BOOL flag = YES;
         BOOL flag1 = YES;
+        int count = 0;
+        
         char ary[3][3];
         
         for (int i=0; i<3; i++)
@@ -44,6 +46,7 @@ int main(int argc, const char * argv[]) {
         {
             if (flag)
             {
+                NSLog(@"Player 1 :");
                BOOL flag2 = [cg addElements:ary withNum:'1' playerName:player1];
                 flag = NO;
                 for (int i=0; i<3; i++)
@@ -58,12 +61,18 @@ int main(int argc, const char * argv[]) {
                 {
                     break;
                 }
-
+                
+                count+=1;
                 [cg print:ary];
+                if (count == 9) {
+                    NSLog(@"Match Drawn");
+                    break;
+                }
                 
             }
             else
             {
+                NSLog(@"Player 2 :");
                BOOL flag3 = [cg addElements:ary withNum:'0' playerName:player2];
                 flag = YES;
                 for (int i=0; i<3; i++)
@@ -77,9 +86,14 @@ int main(int argc, const char * argv[]) {
                 if (flag3) {
                     break;
                 }
-
+                count+=1;
                 [cg print:ary];
-                            }
+                
+                if (count == 9) {
+                    NSLog(@"Match Drawn");
+                    break;
+                }
+            }
         }
         
     }

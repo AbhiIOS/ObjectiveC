@@ -2,7 +2,7 @@
 //  CrossGame.h
 //  Tic Tac Toe
 //
-//  Created by BridgeLabz Solutions LLP  on 10/25/16.
+//  Created by ABHISHEK GANGULY on 10/25/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
