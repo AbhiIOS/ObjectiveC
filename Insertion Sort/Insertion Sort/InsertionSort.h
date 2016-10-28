@@ -2,7 +2,7 @@
 //  InsertionSort.h
 //  Insertion Sort
 //
-//  Created by BridgeLabz Solutions LLP  on 10/15/16.
+//  Created by Abhishek Ganguly on 10/15/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 

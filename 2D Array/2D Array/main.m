@@ -15,20 +15,25 @@ int main(int argc, const char * argv[]) {
         _dArray *array = [[_dArray alloc]init];
         
         int rows,columns;
+        
+        //Taking user input for rows
         NSLog(@"Enter the no. of rows of 2d array");
         scanf("%d",&rows);
         
+        //Taking user input for columns
         NSLog(@"Enter the no. of columns of 2d array");
         scanf("%d",&columns);
         
         NSMutableArray *Rows = [[NSMutableArray alloc]initWithCapacity:rows];
         NSMutableArray *Columns;
         
+        //Creating 2D Array
         for (int i=0; i<rows; i++)
         {
             Columns = [[NSMutableArray alloc]initWithCapacity:columns];
             for (int j=0; j<columns; j++)
             {
+                //Inserting Elements to the 2D array
                 int element;
                 NSLog(@"Enter the %d,%d element",i+1,j+1);
                 scanf("%d",&element);

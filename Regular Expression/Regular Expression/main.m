@@ -2,7 +2,7 @@
 //  main.m
 //  Regular Expression
 //
-//  Created by BridgeLabz Solutions LLP  on 10/21/16.
+//  Created by Abhishek Ganguly on 10/21/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -13,6 +13,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         RegularExpression *regex = [[RegularExpression alloc]init];
+        
+        //Taking user input
         char name[40];
         NSLog(@"Enter first name");
         scanf("%s",name);

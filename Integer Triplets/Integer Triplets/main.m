@@ -2,7 +2,7 @@
 //  main.m
 //  Integer Triplets
 //
-//  Created by BridgeLabz Solutions LLP  on 10/17/16.
+//  Created by Abhishek Ganguly on 10/17/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -13,12 +13,15 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         Triplets *triple = [[Triplets alloc]init];
+        
+        //TAKING USER INPUT
         int num;
         NSLog(@"Enter the no. of integer to be inserted");
         scanf("%d",&num);
         
         NSMutableArray *array = [[NSMutableArray alloc]initWithCapacity:num];
         
+        //ENTERING THE ELEMENTS INTO THE ARRAY
         for (int i=0; i<num; i++)
         {
             int num1;

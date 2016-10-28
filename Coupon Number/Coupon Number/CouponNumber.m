@@ -2,7 +2,7 @@
 //  CouponNumber.m
 //  Coupon Number
 //
-//  Created by BridgeLabz Solutions LLP  on 10/12/16.
+//  Created by Abhishek Ganguly on 10/12/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 @implementation CouponNumber
 
+//Function for getting coupon number
 +(void)getCouponNumber
 {
     NSMutableArray *ary = [[NSMutableArray alloc] initWithCapacity:20];
@@ -17,6 +18,7 @@
     int i;
     for (i=0; i<=9; i++)
     {
+        //obtaining random number
         NSNumber *num = [NSNumber numberWithInt:arc4random_uniform(20)];
         
        if (i==0)
@@ -25,6 +27,7 @@
        }
        else
         {
+            //checking for repeated character
             int k=0;
             for (j=0; j<[ary count]; j++)
             {
@@ -42,6 +45,7 @@
         }
     }
     
+    //Printing the Distinct coupon numbers
     for (int k=0; k<[ary count]; k++)
     {
         id num = [ary objectAtIndex:k];

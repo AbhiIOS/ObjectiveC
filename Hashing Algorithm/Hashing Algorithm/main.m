@@ -2,7 +2,7 @@
 //  main.m
 //  Hashing Algorithm
 //
-//  Created by BridgeLabz Solutions LLP  on 10/24/16.
+//  Created by Abhishek Ganguly on 10/24/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 

@@ -63,6 +63,7 @@ Pallindrome *newNode;
     }
 }
 
+//adding elements to rear
 -(void)addRear:(char)item
 {
     newNode = [[Pallindrome alloc]initPal];
@@ -72,6 +73,7 @@ Pallindrome *newNode;
     head = newNode;
 }
 
+//Adding elements to front
 -(char)removeFront
 {
     if (head.nextAddr == NULL)
@@ -94,6 +96,7 @@ Pallindrome *newNode;
     }
 }
 
+//Remove from rear
 -(char)removeRear
 {
     Pallindrome *temp = head.nextAddr;
@@ -132,6 +135,7 @@ Pallindrome *newNode;
     }
 }
 
+//to get size
 -(int)size
 {
     int count = 0;
@@ -162,6 +166,7 @@ Pallindrome *newNode;
     }
 }
 
+//function for checking pallindrome
 -(void)checkPalWith:(NSString *)word
 {
     NSMutableArray *array = [[NSMutableArray alloc]initWithCapacity:100];

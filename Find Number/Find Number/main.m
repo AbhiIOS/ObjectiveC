@@ -13,6 +13,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         FindNumber *Fnum = [[FindNumber alloc]init];
+        
+        //TAKING USER INPUT
         int num;
         NSLog(@"Enter the steps you want");
         scanf("%d",&num);

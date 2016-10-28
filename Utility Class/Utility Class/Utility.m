@@ -2,7 +2,7 @@
 //  Utility.m
 //  Utility Class
 //
-//  Created by BridgeLabz Solutions LLP  on 10/24/16.
+//  Created by Abhishek Ganguly on 10/24/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -76,13 +76,8 @@ NSDate *date;
     return ary;
 }
 
--(void)doBinarySearchString:(NSMutableArray *)ary1
+-(void)doBinarySearchString:(NSMutableArray *)ary1 WithName:(NSString *)name
 {
-    char name[40];
-    NSLog(@"Enter a word to be searched");
-    scanf("%s",name);
-    NSString *word = [NSString stringWithUTF8String:name];
-    
    // NSLog(@"%@",ary1);
     long head = 0;
     
@@ -97,16 +92,16 @@ NSDate *date;
        // NSLog(@"%@",[ary1 objectAtIndex:mid]);
         
         
-        if ([word compare:[ary1 objectAtIndex:mid]]== NSOrderedSame)
+        if ([name compare:[ary1 objectAtIndex:mid]]== NSOrderedSame)
         {
             val = mid+1;
             break;
         }
-        else if ([word compare:[ary1 objectAtIndex:mid]]==NSOrderedAscending)
+        else if ([name compare:[ary1 objectAtIndex:mid]]==NSOrderedAscending)
         {
             tail = mid-1;
         }
-        else if ([word compare:[ary1 objectAtIndex:mid]]==NSOrderedDescending)
+        else if ([name compare:[ary1 objectAtIndex:mid]]==NSOrderedDescending)
         {
             head = mid+1;
         }
@@ -115,18 +110,15 @@ NSDate *date;
     
     if (val != 0)
     {
-        NSLog(@"%@ is at %lu position of list",word,val);
+        NSLog(@"%@ is at %lu position of list",name,val);
     } else {
         NSLog(@"Word not found");
     }
 
 }
 
--(void)doBinarySearchInteger:(NSMutableArray *)ary2
+-(void)doBinarySearchInteger:(NSMutableArray *)ary2 WithNum:(int)number
 {
-    int num;
-    NSLog(@"Enter a number to be searched");
-    scanf("%d",&num);
     long val = 0;
     
     //NSLog(@"%@",ary2);
@@ -141,16 +133,16 @@ NSDate *date;
        // NSLog(@"%@",[ary2 objectAtIndex:mid]);
         
         
-        if (num == [[ary2 objectAtIndex:mid] intValue])
+        if (number == [[ary2 objectAtIndex:mid] intValue])
         {
             val = mid+1;
             break;
         }
-        else if (num < [[ary2 objectAtIndex:mid] intValue])
+        else if (number < [[ary2 objectAtIndex:mid] intValue])
         {
             tail = mid-1;
         }
-        else if (num > [[ary2 objectAtIndex:mid] intValue])
+        else if (number > [[ary2 objectAtIndex:mid] intValue])
         {
             head = mid+1;
         }
@@ -158,7 +150,7 @@ NSDate *date;
     }
     
     if (val != 0) {
-        NSLog(@"%d is at %lu position in list",num,val);
+        NSLog(@"%d is at %lu position in list",number,val);
     } else {
         NSLog(@"Word not found");
     }
@@ -251,7 +243,7 @@ NSDate *date;
 -(float)stopTimer
 {
     double elapsedTime = [date timeIntervalSinceNow];
-    NSLog(@"Total time elapsed : %f",elapsedTime*-1);
+    NSLog(@"Total time elapsed : %f seconds",elapsedTime*-1);
     return elapsedTime;
 }
 

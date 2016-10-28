@@ -2,7 +2,7 @@
 //  BubbleSort.m
 //  Bubble Sort
 //
-//  Created by BridgeLabz Solutions LLP  on 10/15/16.
+//  Created by Abhishek Ganguly on 10/15/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 @implementation BubbleSort
 
+//Function for bubble Sort
 -(NSMutableArray *)doBubbleSort:(NSMutableArray *)array
 {
     for (int i=0; i<[array count]; i++)

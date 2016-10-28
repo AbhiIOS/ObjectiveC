@@ -2,7 +2,7 @@
 //  main.m
 //  Flip Coin
 //
-//  Created by BridgeLabz Solutions LLP  on 10/10/16.
+//  Created by Abhishek Ganguly on 10/10/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -13,6 +13,8 @@ int main(int argc, const char * argv[]) {
        int num;
         int heads=0;
         int tails = 0;
+        
+        //Taking user input
         NSLog(@"Enter the number of times to flip the coin");
         scanf("%d",&num);
         int i=0;
@@ -31,6 +33,7 @@ int main(int argc, const char * argv[]) {
             i++;
         }
         
+        //Calculating total percentage of heads & tails
        double perc = (double)heads/num*100;
       double perc1 = (double)tails/num*100;
       NSLog(@"Heads: %d%c",(int)perc,'%');

@@ -2,7 +2,7 @@
 //  main.m
 //  Power 2
 //
-//  Created by BridgeLabz Solutions LLP  on 10/12/16.
+//  Created by Abhishek Ganguly on 10/12/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -14,10 +14,12 @@ int main(int argc, const char * argv[]) {
         
         PowerOf2 *pow = [[PowerOf2 alloc]init];
         
+        //Taking user input
         int num;
         NSLog(@"Enter the value of power");
         scanf("%d",&num);
         
+        //Performing validation
         if (num<=0)
         {
             while (num<=0)

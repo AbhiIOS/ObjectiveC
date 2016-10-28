@@ -2,7 +2,7 @@
 //  main.m
 //  Stopwatch
 //
-//  Created by BridgeLabz Solutions LLP  on 10/22/16.
+//  Created by Abhishek Ganguly on 10/22/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -17,8 +17,10 @@ int main(int argc, const char * argv[]) {
         NSDate *date;
         if (num == 1)
         {
+            //Timer started
             date = [NSDate date];
             NSLog(@"Timer started");
+            NSLog(@"%@",date);
         }
         
         int num1;
@@ -26,6 +28,7 @@ int main(int argc, const char * argv[]) {
         scanf("%d",&num1);
         if (num1 == 2)
         {
+            //Timer stopped
             NSTimeInterval endTime = [date timeIntervalSinceNow];
             NSLog(@"Total Time Elapsed : %f seconds",endTime*-1);
         }

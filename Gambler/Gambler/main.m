@@ -2,7 +2,7 @@
 //  main.m
 //  Gambler
 //
-//  Created by BridgeLabz Solutions LLP  on 10/12/16.
+//  Created by Abhishek Ganguly on 10/12/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -15,7 +15,7 @@ int main(int argc, const char * argv[]) {
         Gambler *gamble = [[Gambler alloc]init];
         
         int stake,goal,trials;
-        
+        //Taking user input
         NSLog(@"Enter the stake");
         scanf("%d",&stake);
         NSLog(@"Enter the goal");

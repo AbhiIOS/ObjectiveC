@@ -32,6 +32,7 @@
     [dateformatter setDateFormat:@"dd/MM/YYYY"];
     NSString *date = [dateformatter stringFromDate:[NSDate date]];
     
+    //Replacing the expressions
     for (int i=0; i<4; i++)
     {
         if (i==0)

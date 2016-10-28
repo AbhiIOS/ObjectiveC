@@ -2,7 +2,7 @@
 //  main.m
 //  Factors
 //
-//  Created by BridgeLabz Solutions LLP  on 10/12/16.
+//  Created by Abhishek Ganguly on 10/12/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -14,11 +14,13 @@ int main(int argc, const char * argv[]) {
         
         Factors *fact = [[Factors alloc]init];
         
+        //Taking user input
         int num;
         
         NSLog(@"Enter a number to find prime Factors");
         scanf("%d",&num);
         
+        //calling function
         [fact getFactors:num];
         
         

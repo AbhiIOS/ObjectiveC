@@ -2,7 +2,7 @@
 //  InsertionSort.m
 //  Insertion Sort
 //
-//  Created by BridgeLabz Solutions LLP  on 10/15/16.
+//  Created by Abhishek Ganguly on 10/15/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -10,6 +10,7 @@
 
 @implementation InsertionSort
 
+//Function for Insertion sort
 -(NSMutableArray *)doInsertionSort:(NSMutableArray *)array
 {
     for (int i=1; i<[array count]; i++)

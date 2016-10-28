@@ -2,7 +2,7 @@
 //  main.m
 //  Bank Cash Counter2
 //
-//  Created by BridgeLabz Solutions LLP  on 10/26/16.
+//  Created by Abhishek Ganguly on 10/26/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -24,12 +24,13 @@ int main(int argc, const char * argv[]) {
             
             switch (value) {
                 case 0:
+                    //Exiting
                     NSLog(@"no transactions made");
                     var = false;
                     break;
                     
                 case 1:
-                    
+                    //Depositing money
                     NSLog(@"enter the amount ");
                     scanf("%d",&amount);
                     
@@ -51,7 +52,7 @@ int main(int argc, const char * argv[]) {
                     break;
                     
                 case 2:
-                    
+                    //Withdrawing money
                     NSLog(@"enter the amount ");
                     scanf("%d",&amount);
                     

@@ -13,6 +13,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         Pallindrome *dequeue = [[Pallindrome alloc]init];
+        
+        //Taking user input
         char wrd[40];
         NSLog(@"Enter a word");
         scanf("%s",wrd);

@@ -10,6 +10,7 @@
 
 @implementation Triplets
 
+//Function for finding Triplets
 -(void)findTriplet:(NSMutableArray *)ar
 {
     int count=0;
@@ -50,7 +51,8 @@
                     }
                    
                     str = (NSMutableString*)[ar1 componentsJoinedByString:@","];
-                    [new insertObject:str atIndex:i];
+                    //[new insertObject:str atIndex:i];
+                    NSLog(@"%@",str);
                     
                 }
 
@@ -58,9 +60,10 @@
         }
     }
     
-    str = (NSMutableString*)[new componentsJoinedByString:@"\n"];
+    //Printing the ALL TRIPLETS
     NSLog(@"The number of Triplets are: %d",count);
-    NSLog(@"\n%@",str);
+    
+    //NSLog(@"\n%@",str);
 }
 
 @end

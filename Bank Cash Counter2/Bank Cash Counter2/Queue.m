@@ -2,7 +2,7 @@
 //  Queue.m
 //  Bank Cash Counter2
 //
-//  Created by BridgeLabz Solutions LLP  on 10/26/16.
+//  Created by Abhishek Ganguly on 10/26/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -38,7 +38,7 @@
 
 
 
-
+//Removing the node
 -(id)remove
 {
     Node *temp=head;
@@ -54,6 +54,7 @@
     return temp;
 }
 
+//Checking empty or not
 -(BOOL)isempty
 {
     if (head == nil)

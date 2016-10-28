@@ -2,7 +2,7 @@
 //  main.m
 //  LeapYear
 //
-//  Created by BridgeLabz Solutions LLP  on 10/10/16.
+//  Created by Abhishek Ganguly on 10/10/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -11,6 +11,8 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         int year;
+        
+        //Taking user input
         NSLog(@"Enter the year");
         scanf("%d",&year);
         int count = 0;
@@ -21,6 +23,7 @@ int main(int argc, const char * argv[]) {
             count++;
         }
         
+        //Performing validation
         while(count!=4)
         {
             int count1 =0;
@@ -42,6 +45,7 @@ int main(int argc, const char * argv[]) {
 
         }
         
+        //Checking entered year is leap year or not
             if (((year%4==0) && (year%100!=0))||(year%400==0))
             {
                 NSLog(@"%d is a Leap Year",year);

@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0A57B8951DC3587E0088C3C5 /* HarmonicNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A57B8941DC3587E0088C3C5 /* HarmonicNumber.m */; };
 		0AE7679E1DADF89C001F53B3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE7679D1DADF89C001F53B3 /* main.m */; };
-		0AE767A61DADF8BD001F53B3 /* HarmonicNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = 0AE767A51DADF8BD001F53B3 /* HarmonicNumber.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,10 +24,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0A57B8931DC3587E0088C3C5 /* HarmonicNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarmonicNumber.h; sourceTree = "<group>"; };
+		0A57B8941DC3587E0088C3C5 /* HarmonicNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HarmonicNumber.m; sourceTree = "<group>"; };
 		0AE7679A1DADF89B001F53B3 /* Harmonic Number */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Harmonic Number"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE7679D1DADF89C001F53B3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		0AE767A41DADF8BD001F53B3 /* HarmonicNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HarmonicNumber.h; sourceTree = "<group>"; };
-		0AE767A51DADF8BD001F53B3 /* HarmonicNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HarmonicNumber.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,8 +44,6 @@
 		0AE767911DADF89B001F53B3 = {
 			isa = PBXGroup;
 			children = (
-				0AE767A41DADF8BD001F53B3 /* HarmonicNumber.h */,
-				0AE767A51DADF8BD001F53B3 /* HarmonicNumber.m */,
 				0AE7679C1DADF89B001F53B3 /* Harmonic Number */,
 				0AE7679B1DADF89B001F53B3 /* Products */,
 			);
@@ -63,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				0AE7679D1DADF89C001F53B3 /* main.m */,
+				0A57B8931DC3587E0088C3C5 /* HarmonicNumber.h */,
+				0A57B8941DC3587E0088C3C5 /* HarmonicNumber.m */,
 			);
 			path = "Harmonic Number";
 			sourceTree = "<group>";
@@ -124,7 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AE7679E1DADF89C001F53B3 /* main.m in Sources */,
-				0AE767A61DADF8BD001F53B3 /* HarmonicNumber.m in Sources */,
+				0A57B8951DC3587E0088C3C5 /* HarmonicNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +245,7 @@
 				0AE767A31DADF89C001F53B3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

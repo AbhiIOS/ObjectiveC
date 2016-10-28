@@ -23,12 +23,14 @@ NSMutableArray *stack;
     return (self);
 }
 
+//Function for adding the character to stack
 -(void)push:(char)charac
 {
     id val = [NSNumber numberWithChar:charac];
     [stack addObject:val];
 }
 
+//Function for removing the top element of stack
 -(char)pop
 {
     char charc =[[stack lastObject] charValue];
@@ -36,12 +38,14 @@ NSMutableArray *stack;
     return charc;
 }
 
+//Function for printing the last element of stack
 -(char)peek
 {
     char charc = [[[stack lastObject] copy] charValue];
     return charc;
 }
 
+//for checking empty or not
 -(BOOL)isEmpty
 {
     if ([stack count] == 0)
@@ -54,6 +58,7 @@ NSMutableArray *stack;
     }
 }
 
+//for calculating size of stack
 -(int)size
 {
     return (int)[stack count];

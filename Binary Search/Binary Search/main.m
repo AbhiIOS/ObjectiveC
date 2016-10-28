@@ -2,7 +2,7 @@
 //  main.m
 //  Binary Search
 //
-//  Created by BridgeLabz Solutions LLP  on 10/14/16.
+//  Created by Abhishek Ganguly on 10/14/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -12,6 +12,7 @@
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
+        //Reading the data from a file
         NSData *path = [NSData dataWithContentsOfFile:@"/Users/bridgelabz/Desktop/Data.txt"];
         NSString *lines = [[NSString alloc]initWithBytes:[path bytes] length:[path length] encoding:NSUTF8StringEncoding];
         
@@ -32,14 +33,18 @@ int main(int argc, const char * argv[]) {
         
         BinarySearch *search = [[BinarySearch alloc]init];
         
+        //Taking user input
         char name[40];
         NSLog(@"Enter the the word to be searched");
         scanf("%s",name);
         NSString *str = [NSString stringWithUTF8String:name];
         
+        //Sorting the data which are read from a file
         NSMutableArray *temp = [search doSort:array];
         NSString *string = [temp componentsJoinedByString:@" "];
         NSLog(@"%@",string);
+        
+        //Performing Binary search
         long val = [search doBinarySearch:temp withWord:str];
         
         if (val==0)

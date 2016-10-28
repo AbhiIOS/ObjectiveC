@@ -2,7 +2,7 @@
 //  HarmonicNumber.m
 //  Harmonic Number
 //
-//  Created by BridgeLabz Solutions LLP  on 10/12/16.
+//  Created by Abhishek Ganguly on 10/28/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -10,16 +10,16 @@
 
 @implementation HarmonicNumber
 
--(void)getHarmonicNumber:(int)num1
+//Function for calculating Harmonic Number
+-(void)getHarmonicNumber:(int)num
 {
-    float sum = 0.0;
-    for (int i=1;i<=num1 ;i++)
+    double finalVal = 0.0;
+    for (double i=1; i<=num; i++)
     {
-        float num = (float)1/i;
-        sum = sum + num;
+        finalVal =(finalVal + (1/i));
     }
     
-    NSLog(@"The %d%c%c Harmonic value is: %f",num1,'t','h',sum);
+    NSLog(@"Harmonic value of %d is: %f",num,finalVal);
 }
 
 @end

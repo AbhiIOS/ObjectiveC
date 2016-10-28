@@ -10,6 +10,7 @@
 
 @implementation FindNumber
 
+//fUNCTION FOR FINDING THE NUMBER
 -(void)getNumber:(int)steps
 {
     int result = 1;

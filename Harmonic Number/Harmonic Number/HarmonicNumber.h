@@ -2,7 +2,7 @@
 //  HarmonicNumber.h
 //  Harmonic Number
 //
-//  Created by BridgeLabz Solutions LLP  on 10/12/16.
+//  Created by Abhishek Ganguly on 10/28/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -10,6 +10,5 @@
 
 @interface HarmonicNumber : NSObject
 
--(void)getHarmonicNumber:(int)num1;
-
+-(void)getHarmonicNumber:(int)num;
 @end

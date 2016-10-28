@@ -2,7 +2,7 @@
 //  main.m
 //  Balanced Paranthesis
 //
-//  Created by BridgeLabz Solutions LLP  on 10/19/16.
+//  Created by Abhishek Ganguly on 10/19/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -13,6 +13,8 @@ int main(int argc, const char * argv[]) {
     @autoreleasepool {
         
         BalancedParaenthesis *stck = [[BalancedParaenthesis alloc] init];
+        
+        //Taking user input
         char exp[100];
         NSLog(@"Enter the expression");
         scanf("%s",exp);

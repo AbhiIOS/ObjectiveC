@@ -2,7 +2,7 @@
 //  Stock.m
 //  Stock Report
 //
-//  Created by BridgeLabz Solutions LLP  on 10/13/16.
+//  Created by Abhishek Ganguly on 10/13/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -15,6 +15,7 @@ NSMutableArray *shares;
 NSMutableArray *values;
 NSMutableArray *total;
 
+//function for entering the data of shares
 -(void)entry:(int)num
 {
     names = [[NSMutableString alloc]initWithCapacity:100];
@@ -27,16 +28,20 @@ NSMutableArray *total;
     for (int i=0; i<num; i++)
     {
         NSLog(@"Enter the details of stock: %d",i+1);
+        
+        //Taking Name from user
         NSLog(@"Name:");
         scanf("%s",name);
         NSString *str = [NSString stringWithCString:name encoding:1];
         [names insertString:str atIndex:i];
         
+        //Total No. of shares
         NSLog(@"No. of shares:");
         scanf("%d",&share);
         id num = [NSNumber numberWithInt:share];
         [shares insertObject:num atIndex:i];
         
+        //Price of each share
         NSLog(@"Values of each share");
         scanf("%d",&price);
         id num1 = [NSNumber numberWithInt:price];
@@ -45,6 +50,7 @@ NSMutableArray *total;
     }
 }
 
+//Function for calculating the price of shares
 -(void)calculate:(int)num
 {
      total = [[NSMutableArray alloc]initWithCapacity:100];
@@ -65,6 +71,7 @@ NSMutableArray *total;
     }
 }
 
+//Function for calculating the total price of shares
 -(void)allTotal:(int)num
 {
     long alltotal = 0;

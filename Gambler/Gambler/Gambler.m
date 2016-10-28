@@ -2,7 +2,7 @@
 //  Gambler.m
 //  Gambler
 //
-//  Created by BridgeLabz Solutions LLP  on 10/12/16.
+//  Created by Abhishek Ganguly on 10/12/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -25,6 +25,7 @@
             if (val<0.5)
             {
                 cash+=1;
+                //NSLog(@"%d",cash);
             }
             else
             {
@@ -35,9 +36,11 @@
         if (cash == goal)
         {
             wins+=1;
+            //NSLog(@"%d",cash);
         }
     }
     
+    //Calculating total percentage of win & lose
     float perc = (float)wins/trial*100;
     float avgBet =(float)(bets/trial);
     

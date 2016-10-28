@@ -2,7 +2,7 @@
 //  main.m
 //  Bubble Sort
 //
-//  Created by BridgeLabz Solutions LLP  on 10/15/16.
+//  Created by Abhishek Ganguly on 10/15/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -14,12 +14,14 @@ int main(int argc, const char * argv[]) {
         
         BubbleSort *sort = [[BubbleSort alloc]init];
         
+        //Taking user input
         int num;
         NSLog(@"Enter the no. of integer to be inserted");
         scanf("%d",&num);
         
         NSMutableArray *arr1 = [[NSMutableArray alloc]initWithCapacity:num];
         
+        //Entering the elements into the array
         for(int i=0; i<num; i++)
         {
             int val;
@@ -29,6 +31,7 @@ int main(int argc, const char * argv[]) {
             [arr1 insertObject:num atIndex:i];
         }
         
+        //Performing Bubble Sort
         NSMutableArray *arr2 = [sort doBubbleSort:arr1];
         NSString *str = [arr2 componentsJoinedByString:@" "];
         NSLog(@"%@",str);

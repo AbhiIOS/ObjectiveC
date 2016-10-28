@@ -10,6 +10,7 @@
 
 @implementation _dArray
 
+//Function for printing array in ouput
 -(void)print2Darray:(NSMutableArray *)array
 {
     NSMutableArray *ar = [[NSMutableArray alloc]initWithCapacity:[array count]];

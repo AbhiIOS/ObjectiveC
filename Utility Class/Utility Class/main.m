@@ -2,7 +2,7 @@
 //  main.m
 //  Utility Class
 //
-//  Created by BridgeLabz Solutions LLP  on 10/24/16.
+//  Created by Abhishek Ganguly on 10/24/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -19,18 +19,30 @@ int main(int argc, const char * argv[]) {
         NSMutableArray *stringArray = [utl importStringData];
         NSMutableArray *integerArray = [utl importIntegerData];
         
+        //EXECUTING STRING BINARY SEARCH
         NSMutableArray *sortedStringArray = [utl doSort:stringArray];
+        char name[40];
+        NSLog(@"Enter a word to be searched");
+        scanf("%s",name);
+        NSString *word = [NSString stringWithUTF8String:name];
+
         [utl startTimer];
-        [utl doBinarySearchString:sortedStringArray];
+        [utl doBinarySearchString:sortedStringArray WithName:word];
         [secndsArray addObject:[NSNumber numberWithFloat:[utl stopTimer]]];
         
         NSLog(@"\n");
+        //EXECUTING INTEGER BINARY SEARCH
         NSMutableArray *sortedIntArray = [utl bubbleSortInteger:integerArray];
+        int num;
+        NSLog(@"Enter a number to be searched");
+        scanf("%d",&num);
+        
         [utl startTimer];
-        [utl doBinarySearchInteger:sortedIntArray];
+        [utl doBinarySearchInteger:sortedIntArray WithNum:num];
         [secndsArray addObject:[NSNumber numberWithFloat:[utl stopTimer]]];
         
         NSLog(@"\n");
+        //EXECUTING BUBBLE SORT INTEGER
         [utl startTimer];
         NSLog(@"Bubble Sort Integer....");
         NSMutableArray *srtedInt = [utl bubbleSortInteger:integerArray];
@@ -39,6 +51,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@",str);
         
         NSLog(@"\n");
+        //EXECUTING BUBBLE SORT STRING
         [utl startTimer];
         NSLog(@"Bubble Sort String...");
         NSMutableArray *srtedString = [utl bubbleSortString:stringArray];
@@ -47,6 +60,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@",str1);
         
         NSLog(@"\n");
+        //EXECUTING INSERTION SORT INTEGER
         [utl startTimer];
         NSLog(@"Insertion Sort Integer....");
         NSMutableArray *srtedINt = [utl insertionSortInteger:integerArray];
@@ -55,6 +69,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"%@",str2);
         
         NSLog(@"\n");
+        //EXECUTING INSERTION SORT STRING
         [utl startTimer];
         NSLog(@"Insertion Sort String....");
          NSMutableArray *srtedSTR = [utl insertionSortString:stringArray];
@@ -65,12 +80,13 @@ int main(int argc, const char * argv[]) {
         NSLog(@"\n");
         NSLog(@"\n");
         
+        //SORTING EXECUTION TIME OF EVERY METHOD
         secndsArray = [utl sort:secndsArray];
         for (long i=[secndsArray count]-1; i>=0; i--)
         {
             double val = [[secndsArray objectAtIndex:i] doubleValue];
             
-            NSLog(@"%f",val*-1);
+            NSLog(@"%f seconds",val*-1);
 
         }
             }

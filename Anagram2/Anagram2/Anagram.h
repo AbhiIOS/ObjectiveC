@@ -2,7 +2,7 @@
 //  Anagram.h
 //  Anagram2
 //
-//  Created by BridgeLabz Solutions LLP  on 10/13/16.
+//  Created by Abhishek Ganguly on 10/13/16.
 //  Copyright © 2016 BridgeLabz Solutions LLP . All rights reserved.
 //
 
@@ -10,6 +10,6 @@
 
 @interface Anagram : NSObject
 
--(BOOL)anagram:(NSString *)str1 withString:(NSString *)str2;
+-(BOOL)anagram:(NSMutableArray *)str1 withString:(NSMutableArray *)str2;
 
 @end
